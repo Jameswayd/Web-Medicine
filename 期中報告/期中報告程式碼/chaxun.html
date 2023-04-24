@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="./index.js"></script>
+    <meta name="referrer" content="no-referrer">
+
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-content wrapper-content">
+            <h1>藥品查詢網站</h1>
+            <nav class="header-nav">
+
+                <button id="backBtn" onclick="window.location.href='login.html';">LOGIN</button>
+                <button id="backBtn" onclick="window.location.href='login.html';">ABOUT</button>
+                <button id="userBtn" href="user.html" class="link__text">USER</button>
+            </nav>
+        </div>
+    </header>
+    <main>
+
+        <div class="body-content d-flex justify-content-center" id="bodycontent">
+
+            <div class="yaoping-content">
+                <div class="chaxun">藥品查詢：
+                    <input type="text" id="input">
+                    <button id="btn" onclick="buzhidao()">查詢</button>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+    <script>
+        const inputbox = document.getElementById('input');
+        inputbox.addEventListener('keydown', function (event) {
+            if (event.keyCode === 13) {
+                buzhidao()
+            }
+        })
+    </script>
+
+
+
+
+</body>
+
+
+</html>

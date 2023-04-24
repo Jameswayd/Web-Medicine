@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <title>建立帳號(基本資料)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="signupFrame">
+    <form action="" method="get" class="form"> 
+      <h1 class="title">建立帳號</h1>
+      <p>請完整填寫您的資料</p>
+      <div class="inputContainer">
+        <input class="input" placeholder="姓名" type="text" name="Name" size="30" maxlength="50" required>
+        <label class="label">姓名:</label><br>
+      </div>
+      <div class="inputContainer">
+        <input class="input" placeholder="生日" type="text" name="Birthday" size="30" maxlength="50"
+          pattern="\d{4}/\d{2}/\d{2}" required> <!-- pattern有限制 -->
+        <label class="label">生日:YYYY/MM/DD</label><br>
+      </div>
+      <div class="inputContainer">
+        <input class="input" placeholder="手機號碼" type="text" name="Telephone" size="30" maxlength="50"
+          pattern="\d{2}-\d{8}" required> <!-- pattern有限制 -->
+        <label class="label">手機號碼:xx-xxxxxxxx</label><br>
+      </div>
+      <div class="inputContainer">
+        <input class="input" placeholder="name@domain.com" type="text" name="Email" size="30" maxlength="50" required>
+        <label class="label">Email:name@domain.com</label><br>
+      </div>
+      <div class="inputContainer">
+        <input class="input" placeholder="居住地址" type="text" name="Address" size="30" maxlength="50" required>
+        <label class="label">居住地址</label><br>
+      </div>
+
+      <div class="radio-toolbar">
+        <p>您的性別?</p>
+        <input type="radio" id="radio1" name="SEX" value="Boy"  required>
+        <label for="radio1">男</label>
+
+        <input type="radio" id="radio2" name="SEX" value="Girl" required>
+        <label for="radio2">女</label>
+
+      </div>
+      <input type="submit" class="submitBtn" value="下一頁" />
+      <input type="submit" class="clearBtn" value="清空" onclick="document.querySelector('.form').reset();" />
+      <br>
+    </form>
+    <script>
+      // 將表單以輸入資料存儲到 Session Storage 中
+      function saveFormData() {
+        const name = document.querySelector('input[name="Name"]').value;
+        const birthday = document.querySelector('input[name="Birthday"]').value;
+        const telephone = document.querySelector('input[name="Telephone"]').value;
+        const email = document.querySelector('input[name="Email"]').value;
+        const address = document.querySelector('input[name="Address"]').value;
+        const sex = document.querySelector('input[name="SEX"]:checked').value;
+
+        const formData = { name, birthday, telephone, email, address, sex };
+        sessionStorage.setItem('formData', JSON.stringify(formData));
+      }
+
+      // 從 Session Storage 中獲取表單輸入資料
+      function loadFormData() {
+        const formData = JSON.parse(sessionStorage.getItem('formData'));
+        if (formData) {
+          document.querySelector('input[name="Name"]').value = formData.name;
+          document.querySelector('input[name="Birthday"]').value = formData.birthday;
+          document.querySelector('input[name="Telephone"]').value = formData.telephone;
+          document.querySelector('input[name="Email"]').value = formData.email;
+          document.querySelector('input[name="Address"]').value = formData.address;
+          const sex = formData.sex;
+          if (sex === 'Boy') {
+            document.querySelector('#radio1').checked = true;
+          } else if (sex === 'Girl') {
+            document.querySelector('#radio2').checked = true;
+          }
+        }
+      }
+
+      // 在表單提交時使用 saveFormData 函數
+      document.querySelector('.form').addEventListener('submit', function (event) {
+        event.preventDefault(); // 防止表單提交
+        saveFormData();
+      //location.href = 'account2.html'; 
+      });
+
+      // 在表單載入時使用 loadFormData 函數
+      window.addEventListener('load', function () {
+        loadFormData();
+      });
+
+    </script>
+
+    <script>
+      document.querySelector('.form').addEventListener('submit', function (event) {
+        event.preventDefault(); // 防止表單提交
+        if (this.checkValidity()) {
+          // 如果表單驗證通過，將頁面導向目標 URL
+          window.location.href = 'account2.html';
+        } else {
+          // 如果表單驗證未通過，顯示錯誤提示
+          this.reportValidity();
+        }
+      });
+    </script>
+  </div>
+</body>
+
+</html>

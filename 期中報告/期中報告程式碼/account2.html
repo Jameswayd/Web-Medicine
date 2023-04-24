@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <title>建立帳號(身體健康狀況)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="signupFrame">
+        <!-- 設定表單，設定表單提交時呼叫 validateForm 函數 -->
+        <form action="" method="get" class="form" >
+            <h1 class="title">建立帳號(身體健康狀況)</h1>
+            <p>請完整填寫您的資料</p>
+            <div class="inputContainer">
+                <input class="input" placeholder="手機號碼" type="text" name="emergency-contact Telephone" size="30"
+                    maxlength="50" pattern="\d{2}-\d{8}" required>
+                <label class="label">緊急聯絡人手機號碼:xx-xxxxxxxx</label><br><!-- pattern有限制 -->
+            </div>
+            <div class="checkbox-toolbar" id="past-illness" required>
+                <p>過去病史</p>
+                <input type="checkbox" id="checkbox1" name="past-illness[]" value="none">
+                <label for="checkbox1">無</label>
+
+                <input type="checkbox" id="checkbox2" name="past-illness[]" value="diabetes">
+                <label for="checkbox2">糖尿病</label>
+
+                <input type="checkbox" id="checkbox3" name="past-illness[]" value="hypertension">
+                <label for="checkbox3">高血壓</label>
+
+                <input type="checkbox" id="checkbox4" name="past-illness[]" value="stroke">
+                <label for="checkbox4">中風</label>
+
+                <input type="checkbox" id="checkbox5" name="past-illness[]" value="hepatitis-b">
+                <label for="checkbox5">B型肝炎</label>
+            </div>
+            <p></p>
+            <div class="inputContainer">
+                <input class="input" placeholder="其他疾病或健康問題" type="text" name="other-past-illness" size="30"
+                    maxlength="50">
+                <label class="label">其他疾病或健康問題</label><br>
+                <script>//防止同時點擊無和其他疾病的情況
+                    const noneCheckbox = document.getElementById("checkbox1");
+                    const otherIllnessInput = document.querySelector("input[name='other-past-illness']");
+
+                    noneCheckbox.addEventListener("change", function () {
+                        //如果 "無" 選項被勾選，將其他疾病或健康問題的輸入框清空並禁用
+                        if (noneCheckbox.checked) {
+                            otherIllnessInput.value = "";
+                            otherIllnessInput.disabled = true;
+                            // 如果 "無" 選項沒有被勾選，可以使用其他疾病或健康問題的輸入框
+                        } else {
+                            otherIllnessInput.disabled = false;
+                        }
+                    });
+                    const checkboxContainer = document.getElementById("past-illness");
+                    const checkboxes = checkboxContainer.querySelectorAll("input[type='checkbox']");
+
+                    checkboxContainer.addEventListener("change", function () {
+                        // check if "none" option is selected
+                        const noneOption = document.querySelector("input[value='none']");
+                        if (noneOption.checked) {
+                            // if "none" option is selected, uncheck all other checkboxes
+                            checkboxes.forEach(function (checkbox) {
+                                if (checkbox.value !== "none") {
+                                    checkbox.checked = false;
+                                }
+                            });
+                        }
+                    });
+
+                </script>
+            </div>
+            <div class="checkbox-toolbar" id="family-illness" required>
+                <p>家族病史</p>
+                <input type="checkbox" id="checkbox6" name="family-history-illness[]" value="none">
+                <label for="checkbox6">無</label>
+
+                <input type="checkbox" id="checkbox7" name="family-history-illness[]" value="diabetes">
+                <label for="checkbox7">糖尿病</label>
+
+                <input type="checkbox" id="checkbox8" name="family-history-illness[]" value="hypertension">
+                <label for="checkbox8">高血壓</label>
+
+                <input type="checkbox" id="checkbox9" name="family-history-illness[]" value="stroke">
+                <label for="checkbox9">中風</label>
+
+                <input type="checkbox" id="checkbox10" name="family-history-illness[]" value="hepatitis-b">
+                <label for="checkbox10">B型肝炎</label>
+            </div>
+            <p></p>
+            <div class="inputContainer">
+                <input class="input" placeholder="其他疾病或健康問題" type="text" name="other-history-illness" size="30"
+                    maxlength="50">
+                <label class="label">其他疾病或健康問題</label><br>
+                <script>//防止同時點擊無和其他疾病的情況
+                    const noneCheckbox2 = document.getElementById("checkbox6");
+                    const otherIllnessInput2 = document.querySelector("input[name='other-history-illness']");
+
+                    noneCheckbox2.addEventListener("change", function () {
+                        //如果 "無" 選項被勾選，將其他疾病或健康問題的輸入框清空並禁用
+                        if (noneCheckbox2.checked) {
+                            otherIllnessInput2.value = "";
+                            otherIllnessInput2.disabled = true;
+                            // 如果 "無" 選項沒有被勾選，可以使用其他疾病或健康問題的輸入框
+                        } else {
+                            otherIllnessInput2.disabled = false;
+                        }
+                    });
+                    const checkboxContainer2 = document.getElementById("family-illness");
+                    const checkboxes2 = checkboxContainer2.querySelectorAll("input[type='checkbox']");
+
+                    checkboxContainer2.addEventListener("change", function () {
+                        // check if "none" option is selected
+                        const noneOption = document.querySelector("#family-illness input[value='none']");
+                        if (noneOption.checked) {
+                            // if "none" option is selected, uncheck all other checkboxes
+                            checkboxes2.forEach(function (checkbox) {
+                                if (checkbox !== noneOption) {
+                                    checkbox.checked = false;
+                                }
+                            });
+                        }
+                    });
+                </script>
+            </div>
+            <div class="checkbox-toolbar">
+                <p>健康行為史</p>
+                <input type="checkbox" id="checkbox11" name="healthy behavior" value="smokes">
+                <label for="checkbox11">抽菸</label>
+
+                <input type="checkbox" id="checkbox12" name="healthy behavior" value="drink wine">
+                <label for="checkbox12">喝酒</label>
+
+                <input type="checkbox" id="checkbox13" name="healthy behavior" value="chew betel nut">
+                <label for="checkbox13">嚼檳榔</label>
+            </div>
+            <input type="submit" class="submitBtn" value="下一頁" />
+            <input type="button" class="submitBtn" value="上一頁" onclick="window.location.href='account1.html';" />
+            <input type="submit" class="clearBtn" value="清空" onclick="document.querySelector('.form').reset();" />
+            <br>
+        </form>
+        <script>
+            const pastIllness = document.getElementById("past-illness");
+            const familyIllness = document.getElementById("family-illness");
+            const otherIllnessInput4 = document.querySelector("input[name='other-past-illness']");
+            // 表單驗證
+            function validateForm() {
+                if ((!validateCheckbox(pastIllness) && !otherIllnessInput4.value) || (!validateCheckbox(familyIllness))) {
+                    alert("請在過去病史和家族病史都選擇至少一個選項或填寫其他疾病或健康問題。");
+                    return false;
+                }
+                return true;
+            }
+            //檢查checkbox是否至少有一個選中
+            function validateCheckbox(checkboxDiv) {
+                const checkboxes = checkboxDiv.querySelectorAll("input[type='checkbox']");
+                for (let i = 0; i < checkboxes.length; i++) {
+                    if (checkboxes[i].checked) {
+                        return true;
+                    }
+                }
+                return false;
+            }
+
+
+        </script>
+        <script>
+            document.querySelector('.form').addEventListener('submit', function (event) {
+                event.preventDefault(); // 防止表單提交預設動作
+                if (this.checkValidity() && validateForm()) {
+                    // 如果表單驗證通過，並且 validateForm() 返回 true，將頁面導向目標 URL
+                    window.location.href = 'chaxun.html';//完成帳號的頁面
+                } else {
+                    // 如果表單驗證未通過，顯示錯誤提示
+                    this.reportValidity();
+                }
+            });
+
+        </script>
+    </div>
+</body>
+
+</html>
