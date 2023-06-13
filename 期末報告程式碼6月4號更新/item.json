@@ -1,0 +1,230 @@
+{
+    "頭疼": [
+        {
+            "Aspirin": [
+                {
+                    "chname": "阿司匹林",
+                    "egname": "Aspirin",
+                    "effect": "鎮痛、退燒、消炎",
+                    "side_effect": "胃潰瘍、出血風險增加",
+                    "img": "https://www.taiwan-pharma.org.tw/pharma/medicine/01003092.jpg"
+                }
+            ]
+        },
+        {
+            "Ibuprofen": [
+                {
+                    "chname": "布洛芬",
+                    "egname": "Ibuprofen",
+                    "effect": "鎮痛、退燒、消炎",
+                    "side_effect": "胃潰瘍、出血風險增加",
+                    "img": "https://www.taiwan-pharma.org.tw/pharma/medicine/01013230.jpg"
+                }
+            ]
+        },
+        {
+            "Sodium bicarbonate": [
+                {
+                    "chname": "醋酸氫鈉",
+                    "egname": "Sodium bicarbonate",
+                    "effect": "緩解頭痛、舒緩胃部不適",
+                    "side_effect": "可能導致腹脹、噁心",
+                    "img": "https://www.taiwan-pharma.org.tw/pharma/medicine/01021923.jpg"
+                }
+            ]
+        },
+        {
+            "Methadone": [
+                {
+                    "chname": "美沙酮",
+                    "egname": "Methadone",
+                    "effect": "強效鎮痛",
+                    "side_effect": "容易上癮、呼吸抑制",
+                    "img": "https://www.drugs.com/images/pills/nlm/000544571.jpg"
+                }
+            ]
+        },
+        {
+            "Dexamethasone": [
+                {
+                    "chname": "靜脈注射地塞米松",
+                    "egname": "Dexamethasone",
+                    "effect": "減輕頭痛、減少腦部壓力",
+                    "side_effect": "容易引起感染、增加血糖水平",
+                    "img": "https://www.taiwan-pharma.org.tw/pharma/medicine/01025163.jpg"
+                }
+            ]
+        }
+    ],
+    "感冒": [
+        {
+            "Acetaminophen": [
+                {
+                    "chname": "乙醯氨基酚",
+                    "egname": "Acetaminophen",
+                    "effect": "緩解發燒和疼痛",
+                    "side_effect": "少數人可能會出現皮疹、過敏等不良反應",
+                    "img": "https://www.taiwan-pharma.org.tw/pharma/medicine/01013666.jpg"
+                }
+            ]
+        },
+        {
+            "Ibuprofen": [
+                {
+                    "chname": "布洛芬",
+                    "egname": "Ibuprofen",
+                    "effect": "緩解發燒、疼痛和發炎",
+                    "side_effect": "可能會對胃和腸產生刺激，引起胃痛、噁心等不適感",
+                    "img": "https://www.taiwan-pharma.org.tw/pharma/medicine/01013230.jpg"
+                }
+            ]
+        },
+        {
+            "Pseudoephedrine": [
+                {
+                    "chname": "假麻黃素",
+                    "egname": "Pseudoephedrine",
+                    "effect": "緩解咳嗽",
+                    "side_effect": "可能會導致嗜睡、頭暈、噁心等不適感",
+                    "img": "https://www.taiwan-pharma.org.tw/pharma/medicine/01015033.jpg"
+                }
+            ]
+        },
+        {
+            "Dextromethorphan": [
+                {
+                    "chname": "右美沙芬",
+                    "egname": "Dextromethorphan",
+                    "effect": "緩解咳嗽",
+                    "side_effect": "可能會導致嗜睡、頭暈、噁心等不適感",
+                    "img": "https://www.taiwan-pharma.org.tw/pharma/medicine/01016195.jpg"
+                }
+            ]
+        },
+        {
+            "Guaifenesin": [
+                {
+                    "chname": "愈创甘油醚",
+                    "egname": "Guaifenesin",
+                    "effect": "減輕咳嗽和痰",
+                    "side_effect": "可能會導致噁心、嘔吐、腹瀉等不良反應",
+                    "img": "https://m.media-amazon.com/images/I/81N6QDM4tBL.jpg"
+                }
+            ]
+        }
+    ],
+    "嘔吐": [
+        {
+            "Ondansetron": [
+                {
+                    "chname": "恩丹西隆",
+                    "egname": "Ondansetron",
+                    "effect": "減輕噁心和嘔吐",
+                    "side_effect": "可能會出現頭痛、便秘、疲勞等不良反應",
+                    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcydkY5WBKR0xucSOx_2lUKCTO0eKLAPeRjQ&usqp=CAU"
+                }
+            ]
+        },
+        {
+            "Metoclopramide": [
+                {
+                    "chname": "美托洛贝胺",
+                    "egname": "Metoclopramide",
+                    "effect": "減輕噁心和嘔吐",
+                    "side_effect": "可能會導致疲勞、失眠、乳汁分泌增加等不適感",
+                    "img": "https://www.chimei.org.tw/main/cmh_department/59012/info/assets/images/5500/A5500461-01.png"
+                }
+            ]
+        },
+        {
+            "Prochlorperazine": [
+                {
+                    "chname": "丙氯嗪",
+                    "egname": "Prochlorperazine",
+                    "effect": "減輕噁心和嘔吐",
+                    "side_effect": "可能會導致嗜睡、頭暈、口乾等不良反應",
+                    "img": "https://www.taiwan-pharma.org.tw/pharma/medicine/12005454.jpg"
+                }
+            ]
+        },
+        {
+            "Doxylamine": [
+                {
+                    "chname": "多塞平",
+                    "egname": "Doxylamine",
+                    "effect": "減輕噁心和嘔吐",
+                    "side_effect": "可能會導致嗜睡、口乾、便秘等不適感",
+                    "img": "https://vinmec-prod.s3.amazonaws.com/images/20220220_223858_139075_doxylamine-6.max-1800x1800.jpg"
+                }
+            ]
+        },
+        {
+            "Dimenhydrinate": [
+                {
+                    "chname": "二甲西泮",
+                    "egname": "Dimenhydrinate",
+                    "effect": "減輕噁心和嘔吐",
+                    "side_effect": "可能會導致嗜睡、口乾、頭暈等不良反應",
+                    "img": "https://www.taiwan-pharma.org.tw/pharma/medicine/01021586.jpg"
+                }
+            ]
+        }
+    ],
+    "腹瀉": [
+        {
+            "Vitamin B Complex": [
+                {
+                    "chname": "維生素B群",
+                    "egname": "Vitamin B Complex",
+                    "effect": "維生素B群具有調節腸胃道功能的作用,可以減輕腹瀉症狀,並且能夠幫助身體恢復能量和營養。",
+                    "side_effect": "高劑量維生素B群有可能導致頭痛、疲勞、失眠等症狀。",
+                    "img": "https://www.taiwan-pharma.org.tw/pharma/medicine/01022539.jpg"
+                }
+            ]
+        },
+        {
+            "Imodium": [
+                {
+                    "chname": "安痢寧",
+                    "egname": "Imodium",
+                    "effect": "能有效控制腹瀉，減少排便次數。",
+                    "side_effect": "可能會引起便秘、腹痛、噁心等不適症狀",
+                    "img": "https://www.taiwan-pharma.org.tw/pharma/medicine/01019337.jpg"
+                }
+            ]
+        },
+        {
+            "Bromelain": [
+                {
+                    "chname": "鳳梨酵素",
+                    "egname": "Bromelain",
+                    "effect": "具有消化作用，能促進蛋白質分解，減少腹瀉時腸胃負擔",
+                    "side_effect": "能引起輕微的腹部不適和過敏反應",
+                    "img": "https://images.pcone.com.tw/uploads/product_image/6640333/651c5242e64d74977e1235c0b1345971/71355e61cf9d8b1091d03e0399f62c53.jpg"
+                }
+            ]
+        },
+        {
+            "Lomotil": [
+                {
+                    "chname": "洛莫必利",
+                    "egname": "Lomotil",
+                    "effect": "能有效控制腹瀉，減少排便次數",
+                    "side_effect": "可能會引起便秘、口乾、頭暈等不適症狀",
+                    "img": "https://www.drugs.com/images/pills/nlm/000250061.jpg"
+                }
+            ]
+        },
+        {
+            "lopedin cap": [
+                {
+                    "chname": "易必寧膠囊（樂必寧）",
+                    "egname": "lopedin cap",
+                    "effect": "急、慢性腹瀉",
+                    "side_effect": "服藥後持續腹瀉或有發燒情形",
+                    "img": "https://www.standard.com.tw/_upload/images/1706191645590.jpg"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="./index.js" charset="UTF-8"></script>
+
+    <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
+
+    <script src="./get_yaoping.js" charset="UTF-8"></script>
+    <meta name="referrer" content="no-referrer">
+
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-content wrapper-content">
+            <h1>藥品查詢網站</h1>
+            <nav class="header-nav">
+
+                <button id="backBtn" onclick="window.location.href='Login-Page.php';">LOGIN</button>
+                <button id="backBtn" onclick="window.location.href='Login-Page.php';">ABOUT</button>
+                <button id="userBtn" onclick="btnclick(this.getBoundingClientRect())" class="link__text">USER</button>
+                <!-- <button id="logoutBtn" onclick="redirectToPHP()">Logout</button>
+                <script>
+                    function redirectToPHP() {
+                        window.location.href = "logout.php";
+                    }
+                </script> -->
+            </nav>
+        </div>
+
+    </header>
+    <main>
+
+        <div class="body-content d-flex justify-content-center" id="bodycontent">
+
+            <div class="yaoping-content">
+                <div class="chaxun">藥品查詢：
+                    <input type="text" id="input">
+
+                    <button id="btn" onclick="sendDataToPhp()">查詢</button>
+                </div>
+            </div>
+
+        </div>
+        <div id="myModal" class="modal">
+            <div class="modal-content" id="div">
+                <div class="item1" id="userac" onclick="userAccountOnclick()">Name:suibian</div>
+                <div class="item1" id="history">History</div>
+                <div class="item1" id="setting">Setting</div>
+                <div class="item1" id="logout">logout</div>
+
+            </div>
+            <div id="user" class="user">
+                <span class="close" id="close" onclick="close()">&times;</span>
+                <div class="item">
+                    Name:suibian
+                </div>
+
+                <div class="item">Telephone:0909001001</div>
+                <div class="item">Email:suibian@gmail.com</div>
+                <div class="item">Address:woyebuzhidaotian</div>
+                <div class="item">Sex:Male</div>
+            </div>
+
+            <div id="History">
+                <span class="close" id="close1" onclick="close()">&times;</span>
+                <div class="hisItem">感冒</div>
+                <div class="hisItem">Bromelain</div>
+                <div class="hisItem">腹瀉</div>
+                <div class="hisItem">丙氯嗪</div>
+                <div class="hisItem">美托洛贝胺</div>
+
+
+            </div>
+
+        </div>
+
+    </main>
+    <script src="./usermenu.js" charset="UTF-8"></script>
+    <script>
+        const inputbox = document.getElementById('input');
+        inputbox.addEventListener('keydown', function (event) {
+            if (event.keyCode === 13) {
+                sendDataToPhp()
+            }
+        })
+    </script>
+
+
+
+
+</body>
+
+
+</html>
